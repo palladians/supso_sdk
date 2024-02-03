@@ -1,0 +1,17 @@
+{
+  "name": "supso_sdk",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "build:gleam": "gleam build --target javascript",
+    "build:bun": "bun build build/dev/javascript/supso_sdk/supso_sdk.mjs --outdir dist",
+    "build": "bun run build:gleam && bun run build:bun",
+    "test": "gleam test --target javascript"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
